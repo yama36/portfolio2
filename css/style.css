@@ -437,8 +437,153 @@ menu {
 Stylesheet: ベーススタイル
 
 ******************************************************************/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”,“游明朝体”, “YuMincho”,“ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”,“ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+.global-container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md, #header .header-container .header__item, #header .header-container button h2 {
+  font-size: 16px;
+}
+
+.font-mm {
+  font-size: 24px;
+}
+
+.font-lr {
+  font-size: 28px;
+}
+
+.font-lg, #header .header-container .title-container h1 {
+  font-size: 32px;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.content-width {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+.main-title {
+  font-size: 24px;
+}
+
+.sub-title {
+  font-size: 16px;
+}
+
+#header {
+  position: relative;
+}
+
+#header .header-container {
+  position: fixed;
+  height: 80px;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .header-container .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .header-container .title-container img {
+  width: 40px;
+  height: 40px;
+}
+
+#header .header-container .title-container h1 {
+  color: #FFFFFF;
+  line-height: 1.5em;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+#header .header-container .header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  margin-left: 120px;
+}
+
+#header .header-container .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .header-container .header__item {
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-right: 30px;
+}
+
+#header .header-container button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: 20px;
+  width: 170px;
+  height: 54px;
+  background-color: #978F10;
+}
+
+#header .header-container button h2 {
+  font-weight: bold;
+  margin-left: 10px;
+  color: #FFFFFF;
+  line-height: 3em;
 }
 
 @media (max-width: 1280px) {
