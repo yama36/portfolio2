@@ -6,9 +6,11 @@ Stylesheet: ベーススタイル
 
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
+  font-size:1.6rem;/* 16px*/
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”,“游明朝体”, “YuMincho”,“ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”,“ＭＳ Ｐ明朝”, “MS PMincho”, serif;
 }
 
@@ -25,16 +27,16 @@ body {
   font-size: 14px;
 }
 .font-md {
-  font-size: 16px;
+  font-size: 0.8333vw;
 }
 .font-mm {
-  font-size: 24px;
+  font-size: 1.041667vw;
 }
 .font-lr {
   font-size: 28px;
 }
 .font-lg {
-  font-size: 32px;
+  font-size: 1.875vw;
 }
 
 .main-title {
@@ -124,7 +126,7 @@ body {
       }
 
       &__item {
-        @extend .font-md;
+        font-size: 1.6rem;
         font-weight: bold;
         color: $cWhite;
         margin-right: 30px;
@@ -142,7 +144,7 @@ body {
       background-color: #978F10;
 
       h2 {
-        @extend .font-md;
+        font-size: 1.6rem;
         font-weight: bold;
         margin-left: 10px;
         color: $cWhite;
@@ -162,12 +164,7 @@ body {
       background-image: url(../../img/mainbg01.jpg);
       background-size: cover;
       width: 100vw;
-      height: 56.25vw;
-
-      img {
-        width: 100%;
-        z-index: -10;
-      }
+      height: 56.3vw;
 
       .subTitle {
         @extend .sub-title;
@@ -185,7 +182,7 @@ body {
     }
 
     &__text {
-      background-image: url(../../img/bg1.png);
+      background-image: url(../../img/bg01.png);
       background-size: cover;
       width: 100vw;
       height: 35.46vw;
@@ -249,5 +246,118 @@ body {
   }
 }
 
+#contents {
+  margin: 5.52vw 0 4.06vw;
+  $items: oheya, menu, onsen;
+
+  @each $item in $items {
+    .contents__#{$item} {
+      display: flex;
+      margin-bottom: 6.35vw;
+
+      .contents__text {
+        margin: 1.15vw 0 0 7.14vw;
+      }
+
+      img {
+        width: 54.7vw;
+        height: 28.4vw;
+      }
+
+      h2 {
+        @extend .font-lg;
+        line-height: 2em;
+        margin-bottom: 3.91vw;
+      }
+
+      p {
+        @extend .font-md;
+        line-height: 2em;
+        width: 21.7vw;
+        margin-bottom: 3.91vw;
+      }
+
+      button {
+        width: 200px;
+        height: 56px;
+        border: solid 1px #707070;
+        text-align: center;
+      }
+    }
+  }
+
+  .contents {
+    &__menu {
+      flex-direction: row-reverse;
+
+      & .contents__text {
+        margin: 1.15vw 9.06vw 0 0;
+        p {
+          width: 15vw;
+        }
+      }
+    }
+
+    &__onsen {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.contents-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 66px;
+
+  img {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    @extend .font-lg;
+  }
+}
+
+#plan {
+  background-image: url(../../img/bg02.png);
+
+  & .plan {
+    &-container {
+      margin: 0 auto;
+      width: 61.5vw;
+      padding: 3.125vw 0 7.5vw;
+    }
+
+    &__title {
+      @extend .contents-title;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 17.2vw;
+
+      img {
+        width: 100%;
+        margin: 0 0 32px;
+      }
+
+      h3 {
+        @extend .font-mm;
+        width: 95%;
+        margin: 0 auto 36px;
+      }
+
+      p {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+  }
+}
 // 訂正リスト
 // vwで指定しているのにトップのpがレスポンシブに対応していない。
+// 文字の大きさとハイトが対応していないので、後からレスポンシブにする時に個別に合わせる

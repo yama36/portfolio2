@@ -439,9 +439,12 @@ Stylesheet: ベーススタイル
 ******************************************************************/
 html {
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body {
+  font-size: 1.6rem;
+  /* 16px*/
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”,“游明朝体”, “YuMincho”,“ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”,“ＭＳ Ｐ明朝”, “MS PMincho”, serif;
 }
 
@@ -456,20 +459,20 @@ body {
   font-size: 14px;
 }
 
-.font-md, #header .header-container .header__item, #header .header-container button h2 {
-  font-size: 16px;
+.font-md, #contents .contents__oheya p, #contents .contents__menu p, #contents .contents__onsen p {
+  font-size: 0.8333vw;
 }
 
-.font-mm {
-  font-size: 24px;
+.font-mm, #plan .plan__item h3 {
+  font-size: 1.041667vw;
 }
 
 .font-lr {
   font-size: 28px;
 }
 
-.font-lg {
-  font-size: 32px;
+.font-lg, #contents .contents__oheya h2, #contents .contents__menu h2, #contents .contents__onsen h2, .contents-title h2, #plan .plan__title h2 {
+  font-size: 1.875vw;
 }
 
 .main-title, #header .header-container .title-container h1 {
@@ -571,6 +574,7 @@ body {
 }
 
 #header .header-container .header__item {
+  font-size: 1.6rem;
   font-weight: bold;
   color: #FFFFFF;
   margin-right: 30px;
@@ -594,6 +598,7 @@ body {
 }
 
 #header .header-container button h2 {
+  font-size: 1.6rem;
   font-weight: bold;
   margin-left: 10px;
   color: #FFFFFF;
@@ -610,12 +615,7 @@ body {
   background-image: url(../../img/mainbg01.jpg);
   background-size: cover;
   width: 100vw;
-  height: 56.25vw;
-}
-
-#top .top__img img {
-  width: 100%;
-  z-index: -10;
+  height: 56.3vw;
 }
 
 #top .top__img .subTitle {
@@ -634,7 +634,7 @@ body {
 }
 
 #top .top__text {
-  background-image: url(../../img/bg1.png);
+  background-image: url(../../img/bg01.png);
   background-size: cover;
   width: 100vw;
   height: 35.46vw;
@@ -713,6 +713,179 @@ body {
   letter-spacing: .5em;
   right: 69vw;
   top: 23.1vw;
+}
+
+#contents {
+  margin: 5.52vw 0 4.06vw;
+}
+
+#contents .contents__oheya {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6.35vw;
+}
+
+#contents .contents__oheya .contents__text {
+  margin: 1.15vw 0 0 7.14vw;
+}
+
+#contents .contents__oheya img {
+  width: 54.7vw;
+  height: 28.4vw;
+}
+
+#contents .contents__oheya h2 {
+  line-height: 2em;
+  margin-bottom: 3.91vw;
+}
+
+#contents .contents__oheya p {
+  line-height: 2em;
+  width: 21.7vw;
+  margin-bottom: 3.91vw;
+}
+
+#contents .contents__oheya button {
+  width: 200px;
+  height: 56px;
+  border: solid 1px #707070;
+  text-align: center;
+}
+
+#contents .contents__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6.35vw;
+}
+
+#contents .contents__menu .contents__text {
+  margin: 1.15vw 0 0 7.14vw;
+}
+
+#contents .contents__menu img {
+  width: 54.7vw;
+  height: 28.4vw;
+}
+
+#contents .contents__menu h2 {
+  line-height: 2em;
+  margin-bottom: 3.91vw;
+}
+
+#contents .contents__menu p {
+  line-height: 2em;
+  width: 21.7vw;
+  margin-bottom: 3.91vw;
+}
+
+#contents .contents__menu button {
+  width: 200px;
+  height: 56px;
+  border: solid 1px #707070;
+  text-align: center;
+}
+
+#contents .contents__onsen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6.35vw;
+}
+
+#contents .contents__onsen .contents__text {
+  margin: 1.15vw 0 0 7.14vw;
+}
+
+#contents .contents__onsen img {
+  width: 54.7vw;
+  height: 28.4vw;
+}
+
+#contents .contents__onsen h2 {
+  line-height: 2em;
+  margin-bottom: 3.91vw;
+}
+
+#contents .contents__onsen p {
+  line-height: 2em;
+  width: 21.7vw;
+  margin-bottom: 3.91vw;
+}
+
+#contents .contents__onsen button {
+  width: 200px;
+  height: 56px;
+  border: solid 1px #707070;
+  text-align: center;
+}
+
+#contents .contents__menu {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+#contents .contents__menu .contents__text {
+  margin: 1.15vw 9.06vw 0 0;
+}
+
+#contents .contents__menu .contents__text p {
+  width: 15vw;
+}
+
+#contents .contents__onsen {
+  margin-bottom: 0;
+}
+
+.contents-title, #plan .plan__title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 66px;
+}
+
+.contents-title img, #plan .plan__title img {
+  margin-bottom: 20px;
+}
+
+#plan {
+  background-image: url(../../img/bg02.png);
+}
+
+#plan .plan-container {
+  margin: 0 auto;
+  width: 61.5vw;
+  padding: 3.125vw 0 7.5vw;
+}
+
+#plan .plan__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#plan .plan__item {
+  width: 17.2vw;
+}
+
+#plan .plan__item img {
+  width: 100%;
+  margin: 0 0 32px;
+}
+
+#plan .plan__item h3 {
+  width: 95%;
+  margin: 0 auto 36px;
+}
+
+#plan .plan__item p {
+  width: 95%;
+  margin: 0 auto;
 }
 
 @media (max-width: 1280px) {
