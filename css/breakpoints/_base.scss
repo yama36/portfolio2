@@ -4,6 +4,7 @@ Stylesheet: ベーススタイル
 
 ******************************************************************/
 
+// baseOption
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
@@ -27,16 +28,16 @@ body {
   font-size: 14px;
 }
 .font-md {
-  font-size: 0.8333vw;
+  font-size: 0.8333vw; // 16px
 }
 .font-mm {
-  font-size: 1.041667vw;
+  font-size: 1.041667vw; // 20px
 }
 .font-lr {
   font-size: 28px;
 }
 .font-lg {
-  font-size: 1.875vw;
+  font-size: 1.875vw; // 36px
 }
 
 .main-title {
@@ -75,10 +76,29 @@ body {
 }
 
 .content-width {
-  width: 90vw;
   margin: 0 auto;
-  max-width: $contentMaxWidth;
+  width: 61.5vw;
+  padding: 3.125vw 0 7.5vw;
 }
+
+
+
+// contentTitle
+.content-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3.44vw;
+
+  img {
+    margin-bottom: 1.04vw;
+    width: 2.08vw;
+  }
+
+  h2 {
+    @extend .font-lg;
+  }
+}
+
 
 
 
@@ -304,32 +324,17 @@ body {
   }
 }
 
-.contents-title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 66px;
-
-  img {
-    margin-bottom: 20px;
-  }
-
-  h2 {
-    @extend .font-lg;
-  }
-}
-
 #plan {
   background-image: url(../../img/bg02.png);
+  background-size: cover;
 
   & .plan {
     &-container {
-      margin: 0 auto;
-      width: 61.5vw;
-      padding: 3.125vw 0 7.5vw;
+      @extend .content-width;
     }
 
     &__title {
-      @extend .contents-title;
+      @extend .content-title;
     }
 
     &__list {
@@ -349,15 +354,199 @@ body {
         @extend .font-mm;
         width: 95%;
         margin: 0 auto 36px;
+        line-height: 1.6em;
       }
 
       p {
         width: 95%;
         margin: 0 auto;
+        line-height: 2em;
       }
     }
   }
 }
+
+#news {
+  .news {
+    &-container {
+      @extend .content-width;
+      padding-bottom: 3.13vw;
+    }
+
+    &__title {
+      @extend .content-title;
+    }
+
+    &__nav {
+      display: flex;
+      margin-top: 2.30vw;
+      justify-content: center;
+
+      li {
+        margin: 0 1.38vw;
+        flex: 1;
+
+        &:first-child {
+          text-align: right;
+        }
+
+        &:last-child {
+          text-align: left;
+        }
+      }
+
+      a {
+        @extend .font-md;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+
+      &__item {
+        flex-basis: calc(50% - 40px);
+        display: flex;
+        background-color: #F6F6F6;
+        margin: 10px 20px;
+
+        img {
+          width: 5.21vw;
+          height: 5.21vw;
+          margin: 15px 30px 15px 10px;
+        }
+      }
+
+      &__text {
+        margin: 15px 0;
+        margin-right: 15px;
+        line-height: 2em;
+
+        p:first-child {
+          font-size: .73vw;
+          line-height: 1em;
+        }
+      }
+    }
+  }
+
+}
+
+#access {
+  background-image: url(../../img/bg01.png);
+  .access {
+    &-container {
+      @extend .content-width;
+      padding-bottom: 5.73vw;
+      display: flex;
+      flex-wrap: wrap;
+
+    }
+
+    &__title {
+      @extend .content-title;
+      flex-basis: 100%;
+    }
+
+    &__img {
+      width: 34.2vw;
+      height: 19.3vw;
+      object-fit: cover;
+      flex-basis: 55.6%;
+      margin-bottom: 3.59vw;
+    }
+
+    &__list {
+      flex: 1;
+      @extend .font-md;
+      margin: 1.04vw 1.04vw 1.04vw 4.32vw;
+
+      dt {
+        font-weight: bold;
+        margin-bottom: 1.25vw;
+      }
+
+      dd {
+        margin-bottom: 1.25vw;
+      }
+    }
+
+    &__map {
+      flex-basis: 100%;
+      width: 100%;
+
+      &__inner {
+        display: block;
+        margin: 0 auto;
+        width: 42.3vw;
+        height: 30.8vw;
+      }
+    }
+
+  }
+}
+
+#footer {
+  background-image: url(../../img/bg03.png);
+  text-align: center;
+  padding-top: 3.33vw;
+
+  .footer {
+    &__menu {
+      writing-mode: vertical-rl;
+      margin: 0 auto 5vw;
+
+      &__item {
+        margin: 0 1.78vw;
+        text-align: left;
+
+        a {
+          letter-spacing: 1em;
+          font-size: .938vw;
+        }
+      }
+    }
+
+    &__title {
+      @extend .content-title;
+      font-weight: bold;
+    }
+
+    &__address {
+      margin-bottom: 3.13vw;
+
+      &1 {
+        letter-spacing: 1.8px;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+
+        :nth-child(2) {
+            margin: 0;
+        }
+
+        p {
+          @extend .font-md;
+          margin-right: 1.04vw;
+          line-height: 3em;
+        }
+      }
+    }
+
+    &-container {
+      background-color: $cBlack;
+      color: $cWhite;
+      padding: 1.20vw;
+
+      small {
+        font-size: .625vw;
+      }
+    }
+  }
+}
+
 // 訂正リスト
 // vwで指定しているのにトップのpがレスポンシブに対応していない。
 // 文字の大きさとハイトが対応していないので、後からレスポンシブにする時に個別に合わせる
