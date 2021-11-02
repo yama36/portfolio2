@@ -1,0 +1,366 @@
+@charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  /* 16px*/
+  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”,“游明朝体”, “YuMincho”,“ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”,“ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+.global-container {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.font-sm {
+  font-size: 14px;
+}
+
+.font-md, #sub-main .explanation {
+  font-size: 0.8333vw;
+}
+
+.font-mm {
+  font-size: 1.041667vw;
+}
+
+.font-lr {
+  font-size: 28px;
+}
+
+.font-lg, .content-title h2, #sub-top .top__text h1 {
+  font-size: 1.875vw;
+}
+
+.main-title {
+  font-size: 32px;
+}
+
+.sub-title {
+  font-size: 1.77vw;
+}
+
+.top-title {
+  font-size: 1.46vw;
+}
+
+.top-text {
+  font-size: 0.833vw;
+}
+
+.top-name {
+  font-size: 1.15vw;
+}
+
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.content-width {
+  margin: 0 auto;
+  width: 61.5vw;
+  padding: 3.125vw 0 7.5vw;
+}
+
+.content-title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3.44vw;
+}
+
+.content-title img {
+  margin-bottom: 1.04vw;
+  width: 2.08vw;
+}
+
+.sub-contentWidth, #sub-top .top__hierarchy, #sub-main {
+  max-width: 1180px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#header .header-container {
+  background-color: #FFFFFF;
+}
+
+#header .header-container .title-container h1 {
+  color: #000000;
+}
+
+#header .header-container .header__item {
+  color: #000000;
+}
+
+#sub-top {
+  padding-top: 80px;
+}
+
+#sub-top .top {
+  position: relative;
+}
+
+#sub-top .top__img img {
+  width: 100vw;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sub-top .top__text {
+  position: absolute;
+  top: calc( 50% - 80px);
+  left: 50%;
+  -webkit-transform: translate(-50%, calc(-50% + 114px));
+          transform: translate(-50%, calc(-50% + 114px));
+}
+
+#sub-top .top__text h1 {
+  color: #FFFFFF;
+}
+
+#sub-top .top__hierarchy {
+  margin-top: 36px;
+  margin-bottom: 98px;
+}
+
+#sub-main .explanation {
+  text-align: center;
+  line-height: 2em;
+  margin-bottom: 78px;
+}
+
+#sub-main .sub__list1__item {
+  position: relative;
+  width: 100%;
+  height: 438px;
+  margin-bottom: 84px;
+}
+
+#sub-main .sub__list1__item img {
+  position: relative;
+  width: 525px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sub-main .sub__list1__item .text {
+  background-image: url(../img/bg04.png);
+  background-size: cover;
+  width: 823px;
+  height: 381px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  padding-top: 60px;
+  padding-left: 238px;
+}
+
+#sub-main .sub__list1__item .text h2 {
+  font-size: 24px;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list1__item .text p:first-of-type {
+  line-height: 2em;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list1__item .text p:last-of-type {
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+#sub-main .sub__list2__item {
+  position: relative;
+  width: 100%;
+  height: 438px;
+  margin-bottom: 84px;
+}
+
+#sub-main .sub__list2__item img {
+  position: relative;
+  width: 525px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sub-main .sub__list2__item .text {
+  background-image: url(../img/bg04.png);
+  background-size: cover;
+  width: 823px;
+  height: 381px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  padding-top: 60px;
+  padding-left: 238px;
+}
+
+#sub-main .sub__list2__item .text h2 {
+  font-size: 24px;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list2__item .text p:first-of-type {
+  line-height: 2em;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list2__item .text p:last-of-type {
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+#sub-main .sub__list3__item {
+  position: relative;
+  width: 100%;
+  height: 438px;
+  margin-bottom: 84px;
+}
+
+#sub-main .sub__list3__item img {
+  position: relative;
+  width: 525px;
+  height: 300px;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#sub-main .sub__list3__item .text {
+  background-image: url(../img/bg04.png);
+  background-size: cover;
+  width: 823px;
+  height: 381px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -10;
+  padding-top: 60px;
+  padding-left: 238px;
+}
+
+#sub-main .sub__list3__item .text h2 {
+  font-size: 24px;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list3__item .text p:first-of-type {
+  line-height: 2em;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list3__item .text p:last-of-type {
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+#sub-main .sub__list2__item img {
+  position: absolute;
+  right: 0;
+  left: auto;
+}
+
+#sub-main .sub__list2__item .text {
+  position: absolute;
+  right: auto;
+  padding-top: 60px;
+  padding-left: 60px;
+}
+
+#sub-main .sub__list2__item .text h2 {
+  font-size: 24px;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list2__item .text p:first-of-type {
+  line-height: 2em;
+  margin-bottom: 52px;
+}
+
+#sub-main .sub__list2__item .text p:last-of-type {
+  line-height: 1.5em;
+  font-size: 14px;
+}
+
+#sub-main .kounou {
+  margin: 0 auto;
+  padding-top: 95.5px;
+  padding-bottom: 74px;
+  margin-top: 156.5px;
+  margin-bottom: 96.5px;
+  border-top: #E7E7E7 solid 1px;
+  border-bottom: #E7E7E7 solid 1px;
+}
+
+#sub-main .kounou h2 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 51.5px;
+}
+
+#sub-main .kounou dl {
+  margin: 0 auto;
+  max-width: 880px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 15px;
+}
+
+#sub-main .kounou dl dt {
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  border-top: #E7E7E7 solid 1px;
+  line-height: 2.1333em;
+  font-weight: normal;
+  padding: 17.5px 0;
+}
+
+#sub-main .kounou dl dt:last-of-type {
+  line-height: 1.4666em;
+  border-bottom: #E7E7E7 solid 1px;
+}
+
+#sub-main .kounou dl dd {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+  border-top: #E7E7E7 solid 1px;
+  line-height: 2.1333em;
+  padding: 17.5px 0;
+}
+
+#sub-main .kounou dl dd:last-of-type {
+  line-height: 1.4666em;
+  border-bottom: #E7E7E7 solid 1px;
+}
+/*# sourceMappingURL=style-sub.css.map */
