@@ -16,3 +16,14 @@ $(document).on('click', "#modal-overlay,.remove-btn", function(){
     $("body").removeClass("overlay");
   });
 });
+
+
+
+const Target = $('.is-empty');
+$(Target).on('change', function(){
+  if ($(Target).val() !== ""){
+    $(this).removeClass('is-empty');
+  } else {
+    $(this).addClass('is-empty');
+  }
+});

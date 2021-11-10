@@ -468,7 +468,7 @@ menu {
 #modal-content form #name,
 #modal-content form #email,
 #modal-content form #modalPlan,
-#modal-content form #day {
+#modal-content form #calendar {
   display: block;
   height: 32px;
   width: 420px;
@@ -480,11 +480,14 @@ menu {
 }
 
 #modal-content form #modalPlan {
-  color: #707070;
   background-image: linear-gradient(45deg, transparent 50%, rgba(0, 0, 0, 0.4) 50%), linear-gradient(135deg, rgba(0, 0, 0, 0.4) 50%, transparent 50%);
   background-size: 5px 5px, 5px 5px;
   background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
   background-repeat: no-repeat;
+}
+
+#modal-content form #modalPlan.is-empty {
+  color: #707070;
 }
 
 #modal-content form div {
