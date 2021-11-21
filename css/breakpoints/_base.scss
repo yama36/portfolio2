@@ -113,6 +113,39 @@ body {
     width: 100vw;
     display: flex;
     align-items: center;
+    transition: all .8s;
+
+    &.scroll {
+      transition: all .8s;
+      background-color: $cWhite;
+      box-shadow: 0px 3px 10px rgba($color: #686868, $alpha: .5);
+
+      .title-container {
+        img {
+          transition: all .5s;
+
+          &.logo1 {
+            opacity: 0;
+          }
+          &.logo2 {
+            opacity: 1;
+            display: block;
+          }
+        }
+
+        h1 {
+          color: $cBlack;
+          transition: all .8s;
+        }
+      }
+
+      .header {
+        &__item {
+          color: $cBlack;
+          transition: all .8s;
+        }
+      }
+    }
 
     & .title-container {
       margin-left: 20px;
@@ -125,6 +158,16 @@ body {
       img {
         width: 40px;
         height: 40px;
+        transition: all .5s;
+
+        &.logo1 {
+          opacity: 1;
+          display: block;
+        }
+        &.logo2 {
+          position: absolute;
+          opacity: 0;
+        }
       }
 
       h1 {
@@ -133,6 +176,7 @@ body {
         line-height: 1.5em;
         font-weight: bold;
         margin-left: 15px;
+        transition: all .8s;
       }
     }
 
@@ -153,6 +197,7 @@ body {
         font-weight: bold;
         color: $cWhite;
         margin-right: 30px;
+        transition: all .8s;
       }
     }
 
@@ -413,6 +458,7 @@ body {
 #news {
   .news {
     &-container {
+      min-height: 42vw;
       @extend .content-width;
       padding-bottom: 3.13vw;
     }
@@ -427,6 +473,8 @@ body {
       justify-content: center;
 
       li {
+        @extend .font-md;
+        cursor: pointer;
         margin: 0 1.38vw;
         flex: 1;
 
@@ -438,15 +486,12 @@ body {
           text-align: left;
         }
       }
-
-      a {
-        @extend .font-md;
-      }
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
+      transition: all .5s;
 
       &__item {
         flex-basis: calc(50% - 40px);
@@ -474,6 +519,17 @@ body {
     }
   }
 
+  // tab
+  .tab li.active {
+    text-decoration: underline;
+  }
+
+  .area ul {
+    display: none;
+  }
+  .area ul.show {
+    display: flex;
+  }
 }
 
 #access {

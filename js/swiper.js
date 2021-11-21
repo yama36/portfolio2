@@ -1,7 +1,3 @@
-// const topImg1 = document.querySelector('.top__img1');
-// const topImg2 = document.querySelector('.top__img2');
-// const topImg3 = document.querySelector('.top__img3');
-
 const mySwiper = new Swiper(".swiper-container", {
   loop: true,
   centeredSlides: true,
@@ -36,11 +32,3 @@ const mySwiper = new Swiper(".swiper-container", {
   //   },
   // }
 });
-
-// mySwiper.on('slideChange', function () {
-//   topImg1.classList.add('changed');
-// });
-
-// mySwiper.on('slideChangeTransitionEnd', function () {
-//   topImg1.classList.remove('changed')
-// });

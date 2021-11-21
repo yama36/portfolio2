@@ -106,6 +106,7 @@ $maxWidth: 1180px;
 #header {
   .header-container {
     background-color: $cWhite;
+    box-shadow: 0px 3px 10px rgba($color: #686868, $alpha: .5);
 
     & .title-container {
       h1 {

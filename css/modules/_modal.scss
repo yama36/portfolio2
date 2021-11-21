@@ -47,6 +47,7 @@
 			background-size: 5px 5px, 5px 5px;
 			background-position: calc(100% - 15px) 50%, calc(100% - 10px) 50%;
 			background-repeat: no-repeat;
+			cursor: pointer;
 
 			&.is-empty {
 				color: #707070;
@@ -79,6 +80,7 @@
 			margin: 64px auto 90px;
 			border: solid 1px #707070;
 			transition: .3s;
+			cursor: pointer;
 
 			&:hover {
 				opacity: .8;
