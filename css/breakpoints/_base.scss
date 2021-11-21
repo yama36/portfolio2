@@ -268,7 +268,7 @@ body {
   & .top {
     &__img1 {
       position: relative;
-      background-image: url(../../img/mainbg01.jpg);
+      background-image: url(../img/mainbg01.jpg);
       background-size: cover;
       width: 100vw;
       height: 56.3vw;
@@ -276,7 +276,7 @@ body {
 
     &__img2 {
       position: relative;
-      background-image: url(../../img/mainbg02.jpg);
+      background-image: url(../img/mainbg02.jpg);
       background-size: cover;
       width: 100vw;
       height: 56.3vw;
@@ -284,14 +284,14 @@ body {
 
     &__img3 {
       position: relative;
-      background-image: url(../../img/mainbg03.jpg);
+      background-image: url(../img/mainbg03.jpg);
       background-size: cover;
       width: 100vw;
       height: 56.3vw;
     }
 
     &__text {
-      background-image: url(../../img/bg01.png);
+      background-image: url(../img/bg01.png);
       background-size: cover;
       width: 100vw;
       height: 35.46vw;
@@ -414,7 +414,7 @@ body {
 }
 
 #plan {
-  background-image: url(../../img/bg02.png);
+  background-image: url(../img/bg02.png);
   background-size: cover;
 
   & .plan {
@@ -533,7 +533,7 @@ body {
 }
 
 #access {
-  background-image: url(../../img/bg01.png);
+  background-image: url(../img/bg01.png);
   .access {
     &-container {
       @extend .content-width;
@@ -587,7 +587,7 @@ body {
 }
 
 #footer {
-  background-image: url(../../img/bg03.png);
+  background-image: url(../img/bg03.png);
   text-align: center;
   padding-top: 3.33vw;
 
