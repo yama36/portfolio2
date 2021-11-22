@@ -51,6 +51,22 @@
   </head>
   <body>
     <div id="global-container">
+      <nav class="HB">
+        <div class="title-container">
+          <a href="#">
+            <img class="logo2" src="img/logo02.png" alt="logo" />
+          </a>
+        </div>
+        <ul class="HB__menu">
+          <li class="HB__item"><a href="../oheya/index.html">お部屋</a></li>
+          <li class="HB__item"><a href="../menu/index.html">お料理</a></li>
+          <li class="HB__item"><a href="../onsen/index.html">温泉</a></li>
+        </ul>
+        <button id="modal-open" class="HB__reserve">
+          <img src="img/calender.png" alt="calender" />
+          <h2>宿泊予約</h2>
+        </button>
+      </nav>
       <div class="global-content">
         <div id="modal-content">
           <h2>宿泊予約</h2>
@@ -99,6 +115,11 @@
             <button id="modal-open" class="reserve">
               <img src="img/calender.png" alt="calender" />
               <h2>宿泊予約</h2>
+            </button>
+            <button class="HBbtn">
+              <span></span>
+              <span></span>
+              <span></span>
             </button>
           </div>
           <div class="header__top" id="top">
@@ -306,9 +327,9 @@
                 <dd>14:00-23:00</dd>
                 <p>＊4名以上のご予約の場合は、最寄り駅の「鶴岡駅」より送迎が可能ですので、ご連絡ください。</p>
               </dl>
-              <div class="access__map" data-aos="fade-up" data-aos-duration="1500">
+              <!-- <div class="access__map" data-aos="fade-up" data-aos-duration="1500">
                 <iframe class="access__map__inner" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24933.858417388223!2d139.58105087757326!3d38.63203904518282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c6dbd6c03ae15%3A0x10bc5da99bc816ef!2z44CSOTk5LTcyMDUg5bGx5b2i55yM6ba05bKh5biC5rip5rW3!5e0!3m2!1sja!2sjp!4v1635328823615!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              </div>
+              </div> -->
             </div>
           </section>
         </main>
@@ -350,6 +371,7 @@
     <script src="js/calendar.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/hbMenu.js"></script>
     <script>
       AOS.init({
         once: true,
