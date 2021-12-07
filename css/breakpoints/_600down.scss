@@ -3,3 +3,197 @@
 Stylesheet: 600px以下のタブレットやモニタで適用
 
 ******************************************************************/
+
+
+// font
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 14px;
+}
+.font-mm {
+  font-size: 16px;
+}
+.font-lr {
+  font-size: 22px;
+}
+.font-lg {
+  font-size: 24px;
+}
+
+.main-title {
+  font-size: 28px;
+}
+
+.sub-title {
+  font-size: 24px;
+}
+
+.top-title {
+  font-size: 28px;
+}
+
+.top-text {
+  font-size: 16px;
+}
+
+.top-name {
+  font-size: 22px;
+}
+
+
+#header {
+  .header-container {
+    height: 60px;
+
+    .title-container {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .HB {
+      &__btn {
+        margin: 10px 24px 10px 10px;
+      }
+    }
+  }
+}
+
+#top {
+  & .top {
+    @for $i from 1 through 3 {
+      &__img#{$i} {
+        height: 100vh;
+        background-position: center;
+      }
+    }
+
+    &__text {
+      &__title {
+        width: 90%;
+        display: block;
+        margin: 50px auto 30px;
+        left: 0;
+
+        h3 {
+          width: 100%;
+          line-height: 0.5em;
+          font-size: 24px;
+
+          &:after {
+            content: "";
+            margin-right: -14px;
+          }
+        }
+      }
+
+      @for $i from 1 through 3 {
+        &#{$i} {
+          width: 90%;
+          margin: 10px auto;
+
+          p {
+            letter-spacing: 1px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &__name {
+      width: 90%;
+      margin: 20px auto 30px;
+      font-size: 20px;
+    }
+  }
+}
+
+#plan {
+  & .plan {
+    &-container {
+      width: 90%;
+    }
+
+    &__title {
+      margin: 20px auto;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+
+      img {
+        width: 100%;
+        margin: 0;
+      }
+
+      h3 {
+        width: 95%;
+        margin: 10px auto 10px;
+        line-height: 1.6em;
+      }
+
+      p {
+        width: 95%;
+        margin: 0 auto 30px;
+        line-height: 2em;
+      }
+    }
+  }
+}
+
+#news {
+  .news {
+    &-container {
+      width: 90%;
+    }
+
+    &__title {
+      margin: 20px auto;
+    }
+
+    &__list {
+      &__item {
+        margin: 5px 0;
+        width: 100%;
+        flex-basis: auto;
+      }
+    }
+  }
+}
+
+#access {
+  .access {
+    &-container {
+      width: 90%;
+    }
+
+    &__title {
+      flex-basis: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      flex-basis: auto;
+      margin-bottom: 3.59vw;
+    }
+
+    &__list {
+      dt {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      dd {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}

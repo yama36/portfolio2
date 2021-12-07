@@ -51,13 +51,13 @@
   </head>
   <body>
     <div id="global-container">
-      <nav class="HB">
+      <nav class="HB__menu">
         <div class="title-container">
           <a href="#">
             <img class="logo2" src="img/logo02.png" alt="logo" />
           </a>
         </div>
-        <ul class="HB__menu">
+        <ul class="HB__list">
           <li class="HB__item"><a href="../oheya/index.html">お部屋</a></li>
           <li class="HB__item"><a href="../menu/index.html">お料理</a></li>
           <li class="HB__item"><a href="../onsen/index.html">温泉</a></li>
@@ -67,35 +67,36 @@
           <h2>宿泊予約</h2>
         </button>
       </nav>
+      <div id="modal-content">
+        <h2>宿泊予約</h2>
+        <img class="remove-btn" src="../img/close.png" alt="">
+        <form id="form" class="form scroll" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXPvWvOJbZuMEa_L7ENd6Obd17J2R5lnMZkdhGppLZEnf9fw/formResponse">
+          <div>
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="entry.1523392160" placeholder=" 例：石井正悟" required>
+          </div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input type="mail" id="email" name="entry.1145996114" placeholder="例：Example@example.com" required>
+          </div>
+          <div>
+            <label for="modalPlan">ご希望プラン（空いているプランのみ表示されます）</label>
+            <select size="1" id="modalPlan" name="entry.175572300" placeholder="" class="is-empty" required>
+              <option value="" hidden>プランを選択してください</option>
+              <option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+              <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
+              <option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+            </select>
+          </div>
+          <div>
+            <label for="day">日時選択</label>
+            <input id="calendar" data-mindate=today type="text" name="entry.175572300" placeholder="日時を選択してください" required>
+          </div>
+          <button class="changed submit-btn" id="js-submit" type="submit" disabled>送信する</button>
+        </form>
+      </div>
       <div class="global-content">
-        <div id="modal-content">
-          <h2>宿泊予約</h2>
-          <img class="remove-btn" src="img/close.png" alt="">
-          <form id="form" class="form scroll" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXPvWvOJbZuMEa_L7ENd6Obd17J2R5lnMZkdhGppLZEnf9fw/formResponse">
-            <div>
-                <label for="name">お名前</label>
-                <input type="text" id="name" name="entry.1523392160" placeholder=" 例：石井正悟" required>
-            </div>
-            <div>
-                <label for="email">メールアドレス</label>
-                <input type="mail" id="email" name="entry.1145996114" placeholder="例：Example@example.com" required>
-            </div>
-            <div>
-                <label for="modalPlan">ご希望プラン（空いているプランのみ表示されます）</label>
-                <select size="1" id="modalPlan" name="entry.175572300" placeholder="" class="is-empty" required>
-                  <option value="" hidden>プランを選択してください</option>
-                  <option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-                  <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
-                  <option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
-                </select>
-            </div>
-            <div>
-                <label for="day">日時選択</label>
-                <input id="calendar" data-mindate=today type="text" name="entry.175572300" placeholder="日時を選択してください" required>
-            </div>
-            <button class="changed submit-btn" id="js-submit" type="submit" disabled>送信する</button>
-          </form>
-        </div>
+        <div class="HB__back"></div>
         <header id="header">
           <div class="header-container">
             <div class="title-container">
@@ -113,13 +114,15 @@
               </ul>
             </nav>
             <button id="modal-open" class="reserve">
-              <img src="img/calender.png" alt="calender" />
+              <img src="img/calender.png" alt="calender">
               <h2>宿泊予約</h2>
             </button>
-            <button class="HBbtn">
-              <span></span>
-              <span></span>
-              <span></span>
+            <button class="HB">
+              <div class="HB__btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
           </div>
           <div class="header__top" id="top">

@@ -1,6 +1,6 @@
-const btn = document.querySelector('.hb__btn');
-const menu = document.querySelector('.hb__menu');
-const back = document.querySelector('.hb__back');
+const btn = document.querySelector('.HB__btn');
+const menu = document.querySelector('.HB__menu');
+const back = document.querySelector('.HB__back');
 
 
 // スクロール禁止
@@ -9,7 +9,7 @@ function disableScroll(event) {
 }
 
 function hbMenu() {
-  if (btn.className !== "hb__btn inview") {
+  if (btn.className !== "HB__btn inview") {
     btn.classList.add('inview');
     menu.classList.add('inview');
     back.classList.add('inview');

@@ -4,3 +4,215 @@ Stylesheet: 1280px以下のモニタで適用
 
 ******************************************************************/
 
+// font
+.font-sm {
+  font-size: 14px;
+}
+.font-md {
+  font-size: 14px;
+}
+.font-mm {
+  font-size: 16px;
+}
+.font-lr {
+  font-size: 22px;
+}
+.font-lg {
+  font-size: 24px;
+}
+
+.main-title {
+  font-size: 32px;
+}
+
+.sub-title {
+  font-size: 24px;
+}
+
+.top-title {
+  font-size: 28px;
+}
+
+.top-text {
+  font-size: 16px;
+}
+
+.top-name {
+  font-size: 22px;
+}
+
+
+// margin padding
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+.content-width {
+  margin: 0 auto;
+  width: 61.5vw;
+  padding: 3.125vw 0 7.5vw;
+}
+
+
+
+// contentTitle
+.content-title {
+  img {
+    margin-bottom: 10px;
+    width: 32px;
+  }
+}
+
+
+
+// body
+#top {
+  .subTitle {
+    top: 15%;
+  }
+
+  .top__text {
+    min-height: 550px;
+
+    &__title {
+      h3 {
+        font-size: 24px;
+      }
+    }
+
+    @for $i from 1 through 3 {
+      &#{$i} {
+        p {
+          font-size: 16px;
+          padding-left: 5px;
+        }
+      }
+    }
+
+  }
+
+  .top__name {
+    font-size: 20px;
+    top: 50%;
+  }
+}
+
+#contents {
+  $items: oheya, menu, onsen;
+  padding-bottom: 100px;
+
+  @each $item in $items {
+    .contents__#{$item} {
+      img {
+        min-height: 350px
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        min-width: 330px;
+        margin-bottom: 3.91vw;
+      }
+
+      button {
+        font-size: 14px;
+        width: 150px;
+        height: 40px;
+        border: solid 1px #707070;
+        text-align: center;
+      }
+    }
+  }
+}
+
+#plan {
+  & .plan {
+    &-container {
+      width: 80vw;
+    }
+
+    &__item {
+      width: 24vw;
+
+      img {
+        margin: 0 0 24px;
+      }
+
+      h3 {
+
+        margin: 0 auto 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#news {
+  .news {
+    &-container {
+      width: calc(80vw + 40px);
+    }
+
+    &__list {
+      &__text {
+        p {
+          font-size: 14px;
+          line-height: 1.5em;
+
+          &:first-of-type {
+            line-height: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+#access {
+  .access {
+    &-container {
+      width: 80vw;
+    }
+
+    &__img {
+      min-height: 250px;
+    }
+
+    &__list {
+      dt {
+        font-weight: bold;
+        margin-bottom: .5vw;
+      }
+
+      dd {
+        margin-bottom: 1.25vw;
+      }
+    }
+  }
+}
+
+#footer {
+  .footer {
+    &__address {
+      div {
+        p {
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}

@@ -4,3 +4,275 @@ Stylesheet: 900px以下のモニタで適用
 
 ******************************************************************/
 
+// font
+.font-sm {
+  font-size: 16px;
+}
+.font-md {
+  font-size: 16px;
+}
+.font-mm {
+  font-size: 20px;
+}
+.font-lr {
+  font-size: 24px;
+}
+.font-lg {
+  font-size: 28px;
+}
+
+.main-title {
+  font-size: 32px;
+}
+
+.sub-title {
+  font-size: 24px;
+}
+
+.top-title {
+  font-size: 28px;
+}
+
+.top-text {
+  font-size: 16px;
+}
+
+.top-name {
+  font-size: 22px;
+}
+
+
+// margin padding
+.mb-sm {
+  margin-bottom: 16px !important;
+}
+.mb-lg {
+  margin-bottom: 80px !important;
+}
+.pb-sm {
+  padding-bottom: 16px !important;
+}
+.pb-lg {
+  padding-bottom: 80px !important;
+}
+
+
+
+
+#header {
+  & .header-container {
+    &.scroll {
+      .HB__btn {
+        span  {
+          background-color: $cBlack;
+        }
+      }
+    }
+
+    .header {
+      &__nav {
+        display: none;
+      }
+    }
+
+    .reserve {
+      display: none;
+    }
+
+    .HB {
+      display: block;
+      position: absolute;
+      right: 0;
+
+      &__btn {
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+        cursor: pointer;
+
+        span {
+          width: 30px;
+          height: 3px;
+          background-color: $cWhite;
+          margin-bottom: 7.5px;
+          transition: all .5s;
+          transform-origin: left;
+
+          &:last-of-type {
+            margin: 0;
+          }
+        }
+
+        &.inview {
+          span {
+            &:nth-child(1) {
+              transform-origin: left;
+              transform: rotate(45deg);
+            }
+
+            &:nth-child(2) {
+              opacity: 0;
+            }
+
+            &:nth-child(3) {
+              transform-origin: left;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+#top {
+  & .top {
+    &__text {
+      text-align: center;
+      display: flex;
+      min-height: 0;
+      height: initial;
+
+      &__title {
+        display: flex;
+        margin: 50px 0 30px;
+
+        h3 {
+          position: static;
+          display: inline;
+          writing-mode: horizontal-tb;
+          font-size: 28px;
+        }
+      }
+
+      @for $i from 1 through 3 {
+        padding: 0;
+        margin: 0;
+        &#{$i} {
+          writing-mode: horizontal-tb;
+          position: static;
+          margin: 10px 0px;
+          p {
+            padding: 0;
+            position: static;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &__name {
+      writing-mode: horizontal-tb;
+      position: static;
+      margin: 30px 0 50px;
+      font-size: 24px;
+    }
+  }
+}
+
+#contents {
+  padding-bottom: 50px;
+  $items: oheya, menu, onsen;
+
+  @each $item in $items {
+    .contents__#{$item} {
+      flex-direction: column;
+      margin: 0;
+      text-align: center;
+
+      .contents__text {
+        margin: 30px 0 50px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        min-height: initial;
+        margin: 0 auto;
+      }
+
+      h2 {
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+
+      p {
+        line-height: 2em;
+        width: 100%;
+        min-width: 320px;
+        margin-bottom: 3.91vw;
+        font-size: 16px;
+      }
+
+      button {
+        width: 200px;
+        height: 56px;
+        border: solid 1px #707070;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .contents__menu .contents__text p {
+    width: 100%;
+  }
+
+  .contents {
+    &-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__onsen {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#plan {
+  & .plan {
+    &__item {
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        width: 95%;
+        margin: 0 auto;
+        line-height: 2em;
+      }
+    }
+  }
+}
+
+#news {
+  .news {
+    &__list {
+        &__text {
+          height: initial;
+        }
+
+      &__item {
+        img {
+          width: 60px;
+          height: 60px;
+          margin: 10px 15px 10px 10px;
+        }
+      }
+
+      &__text {
+        margin: 10px 0;
+        margin-right: 15px;
+        line-height: 2em;
+
+        p:first-child {
+          font-size: 12px;
+          line-height: 1em;
+        }
+      }
+    }
+  }
+}

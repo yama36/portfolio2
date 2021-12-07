@@ -12,6 +12,7 @@
 
 @media (max-width: 900px) {
     @import "breakpoints/900down";
+    @import 'modules/HBmenu';
 }
 
 @media (max-width: 600px) {

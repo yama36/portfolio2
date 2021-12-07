@@ -1,6 +1,12 @@
+#modal-open {
+	font-size: 40px;
+	cursor: pointer;
+}
+
 #modal-content{
 	position: fixed;
 	width:550px;
+	max-width: 100%;
 	border:2px solid #aaa;
 	background:#fff;
 	z-index:150;
@@ -89,15 +95,6 @@
 			}
 		}
 	}
-
-	.end-message {
-		display: none;
-	}
-
-	.false-message {
-		display: none;
-	}
-
 }
 
 #modal-overlay{
