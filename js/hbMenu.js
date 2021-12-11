@@ -28,10 +28,10 @@ btn.addEventListener('click', () => {
   hbMenu();
 });
 
-menu.addEventListener('click', () => {
+back.addEventListener('click', () => {
   hbMenu();
 });
 
-back.addEventListener('click', () => {
+document.querySelector('.logo2').addEventListener('click', () => {
   hbMenu();
 });

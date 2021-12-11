@@ -103,6 +103,15 @@ $maxWidth: 1180px;
   margin: 0 auto;
 }
 
+.global-container {
+  position: relative;
+}
+
+.global-content {
+  position: relative;
+  background-color: $cWhite;
+}
+
 #header {
   .header-container {
     background-color: $cWhite;
@@ -117,6 +126,12 @@ $maxWidth: 1180px;
     .header {
       &__item {
         color: $cBlack;
+      }
+    }
+
+    .HB {
+      span {
+        background-color: $cBlack;
       }
     }
   }
@@ -182,6 +197,7 @@ $maxWidth: 1180px;
             top: 0;
             left: 0;
             object-fit: cover;
+            z-index: 10;
           }
 
           .text {
@@ -192,7 +208,7 @@ $maxWidth: 1180px;
             position: absolute;
             right: 0;
             bottom: 0;
-            z-index: -10;
+            // z-index: -10;
             padding-top: 60px;
             padding-left: 238px;
 

@@ -10,46 +10,64 @@
   伝統的「和」の息づく空間で、至極のひとときをお過ごしください。"
     />
     <meta name="robots" content="noindex" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/style-sub.css" />
     <title>お料理 -石井花壇 | 温海温泉旅館【公式サイト】</title>
   </head>
   <body>
     <div id="global-container">
-      <div class="global-content sub-page menu">
+      <nav class="HB__menu">
+        <div class="title-container">
+          <a href="../index.html">
+            <img class="logo2" src="../img/logo02.png" alt="logo" />
+          </a>
+        </div>
+        <ul class="HB__list">
+          <li class="HB__item"><a href="../oheya/index.html">お部屋</a></li>
+          <li class="HB__item"><a href="../menu/index.html">お料理</a></li>
+          <li class="HB__item"><a href="../onsen/index.html">温泉</a></li>
+        </ul>
+        <button id="modal-open" class="HB__reserve">
+          <img src="../img/calender.png" alt="calender" />
+          <h2>宿泊予約</h2>
+        </button>
+      </nav>
         <div id="modal-content">
           <h2>宿泊予約</h2>
           <img class="remove-btn" src="../img/close.png" alt="">
           <form id="form" class="form scroll" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXPvWvOJbZuMEa_L7ENd6Obd17J2R5lnMZkdhGppLZEnf9fw/formResponse">
             <div>
-                <label for="name">お名前</label>
-                <input type="text" id="name" name="entry.1523392160" placeholder=" 例：石井正悟" required>
+              <label for="name">お名前</label>
+              <input type="text" id="name" name="entry.1523392160" placeholder=" 例：石井正悟" required>
             </div>
             <div>
-                <label for="email">メールアドレス</label>
-                <input type="mail" id="email" name="entry.1145996114" placeholder="例：Example@example.com" required>
+              <label for="email">メールアドレス</label>
+              <input type="mail" id="email" name="entry.1145996114" placeholder="例：Example@example.com" required>
             </div>
             <div>
-                <label for="modalPlan">ご希望プラン（空いているプランのみ表示されます）</label>
-                <select size="1" id="modalPlan" name="entry.175572300" placeholder="" class="is-empty" required>
-                  <option value="" hidden>プランを選択してください</option>
-                  <option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-                  <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
-                  <option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
-                </select>
+              <label for="modalPlan">ご希望プラン（空いているプランのみ表示されます）</label>
+              <select size="1" id="modalPlan" name="entry.175572300" placeholder="" class="is-empty" required>
+                <option value="" hidden>プランを選択してください</option>
+                <option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
+                <option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+              </select>
             </div>
             <div>
-                <label for="day">日時選択</label>
-                <input id="calendar" data-mindate=today type="text" name="entry.175572300" placeholder="日時を選択してください" required>
+              <label for="day">日時選択</label>
+              <input id="calendar" data-mindate=today type="text" name="entry.175572300" placeholder="日時を選択してください" required>
             </div>
             <button class="changed submit-btn" id="js-submit" type="submit" disabled>送信する</button>
           </form>
         </div>
 
+      <div class="global-content sub-page menu">
+        <div class="HB__back"></div>
         <header id="header">
           <div class="header-container">
             <div class="title-container">
@@ -68,6 +86,13 @@
             <button id="modal-open" class="reserve">
               <img src="../img/calender.png" alt="calender" />
               <h2>宿泊予約</h2>
+            </button>
+            <button class="HB">
+              <div class="HB__btn">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </button>
           </div>
           <div class="header__top" id="sub-top">
@@ -168,8 +193,18 @@
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <script src="../js/swiper.js"></script>
     <script src="../js/modal.js"></script>
+    <script src="../js/calendar.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/tab.js"></script>
+    <script src="../js/hbMenu.js"></script>
   </body>
 </html>

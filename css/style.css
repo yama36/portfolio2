@@ -2077,5 +2077,8 @@ Stylesheet: 600px以下のタブレットやモニタで適用
   #access .access__list dd {
     margin-bottom: 15px;
   }
+  #footer .footer__nav {
+    margin-top: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
