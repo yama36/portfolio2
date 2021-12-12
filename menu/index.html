@@ -10,11 +10,17 @@
   伝統的「和」の息づく空間で、至極のひとときをお過ごしください。"
     />
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/style-sub.css" />
     <title>お料理 -石井花壇 | 温海温泉旅館【公式サイト】</title>
@@ -28,43 +34,86 @@
           </a>
         </div>
         <ul class="HB__list">
-          <li class="HB__item"><a href="../oheya/index.html">お部屋</a></li>
-          <li class="HB__item"><a href="../menu/index.html">お料理</a></li>
-          <li class="HB__item"><a href="../onsen/index.html">温泉</a></li>
+          <li class="HB__item"><a href="oheya/index.html">お部屋</a></li>
+          <li class="HB__item"><a href="menu/index.html">お料理</a></li>
+          <li class="HB__item"><a href="onsen/index.html">温泉</a></li>
         </ul>
         <button id="modal-open" class="HB__reserve">
           <img src="../img/calender.png" alt="calender" />
           <h2>宿泊予約</h2>
         </button>
       </nav>
-        <div id="modal-content">
-          <h2>宿泊予約</h2>
-          <img class="remove-btn" src="../img/close.png" alt="">
-          <form id="form" class="form scroll" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXPvWvOJbZuMEa_L7ENd6Obd17J2R5lnMZkdhGppLZEnf9fw/formResponse">
-            <div>
-              <label for="name">お名前</label>
-              <input type="text" id="name" name="entry.1523392160" placeholder=" 例：石井正悟" required>
-            </div>
-            <div>
-              <label for="email">メールアドレス</label>
-              <input type="mail" id="email" name="entry.1145996114" placeholder="例：Example@example.com" required>
-            </div>
-            <div>
-              <label for="modalPlan">ご希望プラン（空いているプランのみ表示されます）</label>
-              <select size="1" id="modalPlan" name="entry.175572300" placeholder="" class="is-empty" required>
-                <option value="" hidden>プランを選択してください</option>
-                <option value="1">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
-                <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
-                <option value="3">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
-              </select>
-            </div>
-            <div>
-              <label for="day">日時選択</label>
-              <input id="calendar" data-mindate=today type="text" name="entry.175572300" placeholder="日時を選択してください" required>
-            </div>
-            <button class="changed submit-btn" id="js-submit" type="submit" disabled>送信する</button>
-          </form>
-        </div>
+      <div id="modal-content">
+        <h2>宿泊予約</h2>
+        <img class="remove-btn" src="../img/close.png" alt="" />
+        <form
+          id="form"
+          class="form scroll"
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScXPvWvOJbZuMEa_L7ENd6Obd17J2R5lnMZkdhGppLZEnf9fw/formResponse"
+        >
+          <div>
+            <label for="name">お名前</label>
+            <input
+              type="text"
+              id="name"
+              name="entry.1523392160"
+              placeholder=" 例：石井正悟"
+              required
+            />
+          </div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input
+              type="mail"
+              id="email"
+              name="entry.1145996114"
+              placeholder="例：Example@example.com"
+              required
+            />
+          </div>
+          <div>
+            <label for="modalPlan"
+              >ご希望プラン（空いているプランのみ表示されます）</label
+            >
+            <select
+              size="1"
+              id="modalPlan"
+              name="entry.175572300"
+              placeholder=""
+              class="is-empty"
+              required
+            >
+              <option value="" hidden>プランを選択してください</option>
+              <option value="1">
+                【期間限定】海辺の四季旬彩、贅沢美味懐石プラン
+              </option>
+              <option value="2">平日に優雅に楽しむ、特別宿泊プラン</option>
+              <option value="3">
+                絶景貸切露天と個室会席を満喫できるファミリープラン
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="day">日時選択</label>
+            <input
+              id="calendar"
+              data-mindate="today"
+              type="text"
+              name="entry.175572300"
+              placeholder="日時を選択してください"
+              required
+            />
+          </div>
+          <button
+            class="changed submit-btn"
+            id="js-submit"
+            type="submit"
+            disabled
+          >
+            送信する
+          </button>
+        </form>
+      </div>
 
       <div class="global-content sub-page menu">
         <div class="HB__back"></div>
@@ -78,9 +127,15 @@
             </div>
             <nav class="header__nav">
               <ul class="header__menu">
-                <li class="header__item"><a href="/oheya/index.html">お部屋</a></li>
-                <li class="header__item"><a href="/menu/index.html">お料理</a></li>
-                <li class="header__item"><a href="/onsen/index.html">温泉</a></li>
+                <li class="header__item">
+                  <a href="/oheya/index.html">お部屋</a>
+                </li>
+                <li class="header__item">
+                  <a href="/menu/index.html">お料理</a>
+                </li>
+                <li class="header__item">
+                  <a href="/onsen/index.html">温泉</a>
+                </li>
               </ul>
             </nav>
             <button id="modal-open" class="reserve">
@@ -97,7 +152,7 @@
           </div>
           <div class="header__top" id="sub-top">
             <div class="top__img">
-              <img src="../img/menu-header.png" alt="">
+              <img src="../img/menu-header.png" alt="" />
             </div>
             <div class="top__text">
               <h1>お料理</h1>
@@ -115,18 +170,18 @@
         <main id="sub-main">
           <div class="sub-main-container">
             <div class="explanation">
-              地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>
-              大将の技が光る「熱海料理」<br>
+              地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br />
+              大将の技が光る「熱海料理」<br />
               四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
             </div>
             <ul class="sub__list1">
               <li class="sub__list1__item">
-                <img src="../img/menu01.jpg" alt="">
+                <img src="../img/menu01.jpg" alt="" />
                 <div class="text">
                   <h2>地元食材にこだわった会席料理</h2>
                   <p>
-                    みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br>
-                    旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br>
+                    みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br />
+                    旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br />
                     四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
                   </p>
                 </div>
@@ -134,12 +189,12 @@
             </ul>
             <ul class="sub__list2">
               <li class="sub__list2__item">
-                <img src="../img/menu02.jpg" alt="">
+                <img src="../img/menu02.jpg" alt="" />
                 <div class="text">
                   <h2>熱海の漁港で目利きの品を</h2>
                   <p>
-                    石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br>
-                    熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>
+                    石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br />
+                    熱海の魚市場でその日のうちに仕入れたものを使用しております。<br />
                     日本海の宝玉を十分にお楽しみください。
                   </p>
                 </div>
@@ -147,13 +202,13 @@
             </ul>
             <ul class="sub__list3">
               <li class="sub__list3__item">
-                <img src="../img/menu03.jpg" alt="">
+                <img src="../img/menu03.jpg" alt="" />
                 <div class="text">
                   <h2>食材が一流、職人も一流</h2>
                   <p>
-                    石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>
-                    その時の最も旬な食材を、最高の調理でお届けします。<br>
-                    また、お料理への細かいご要望にもお答えできますので、<br>
+                    石井花壇の料理人は料亭で20年経験を積んだものばかり。<br />
+                    その時の最も旬な食材を、最高の調理でお届けします。<br />
+                    また、お料理への細かいご要望にもお答えできますので、<br />
                     お気軽にお申し付けください。
                   </p>
                 </div>
@@ -165,13 +220,19 @@
         <footer id="footer">
           <nav class="footer__nav">
             <ul class="footer__menu">
-              <li class="footer__menu__item"><a href="../oheya/index.html">お部屋</a></li>
-              <li class="footer__menu__item"><a href="../menu/index.html">お料理</a></li>
-              <li class="footer__menu__item"><a href="../onsen/index.html">温泉</a></li>
+              <li class="footer__menu__item">
+                <a href="oheya/index.html">お部屋</a>
+              </li>
+              <li class="footer__menu__item">
+                <a href="menu/index.html">お料理</a>
+              </li>
+              <li class="footer__menu__item">
+                <a href="onsen/index.html">温泉</a>
+              </li>
             </ul>
           </nav>
           <div class="footer__title">
-            <img src="../img/logo02.png" alt="logo">
+            <img src="../img/logo02.png" alt="logo" />
             <h2>石井花壇</h2>
           </div>
           <div class="footer__address">
@@ -191,8 +252,10 @@
       </div>
     </div>
 
-
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
